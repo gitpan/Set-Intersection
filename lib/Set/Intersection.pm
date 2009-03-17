@@ -13,7 +13,7 @@ Version 0.01
 
 =cut
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 
 =head1 SYNOPSIS
@@ -31,8 +31,8 @@ get_intersection
 
 =cut
 
-use Exporter q/import/;
-use Carp;
+require Exporter;
+our @ISA = qw/Exporter/;
 
 our @EXPORT = qw/get_intersection/;
 
@@ -54,12 +54,27 @@ Returns intersection set (as LIST) of all ARRAYs.
 
 =back
 
-=head3 %options
+=over 1
 
-=head4 -preordered => BOOLEAN
+=item %options
 
-To reduce calculation time, get_intersection sorts ARRAYs by their length before calculating intersections.
-This option tells that order of ARRAYs are well done, and calculation of intersection will be based on left most ARRAY.
+=over 2
+
+=item -preordered => BOOLEAN
+
+=over 3
+
+=item To reduce calculation time, get_intersection sorts ARRAYs
+      by their length before calculating intersections.
+
+=item This option tells that order of ARRAYs are well done,
+      and calculation of intersection will be based on left most ARRAY.
+
+=back
+
+=back 
+
+=back
 
 =cut
 

@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:               Set-Intersection
-version:            0.01
+version:            0.02
 abstract:           provides an API to get intersection (of set theory) of ARRAYs.
 author:
     - turugina <turugina@cpan.org>
@@ -9,6 +9,7 @@ distribution_type:  module
 configure_requires:
     ExtUtils::MakeMaker:  0
 requires:
+    Exporter:    0
     Test::More:  0
 no_index:
     directory:
